@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabla de Microchips</title>
+    </head>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        function eliminarFila(fila){
+            if(confirm("Desea borrar la fila "+fila)){
+                $('#fila'+fila).hide();
+            }
+        }
+    </script>
+    <style>
+        .tabla{
+            display: table;
+            border: 1px solid black;
+            height: auto;
+            width: 1200;
+        }
+        .celda{
+            display: table-cell;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+        #titulo{
+            height: 50px;
+            width: 1200px;
+            font-size: 40;
+        }
+        #texto, #eliminar{
+            height: 200px;
+            width: 350px;
+        }
+        .boton{
+            font-size: 25px;
+        }
+    </style>
+    <body>
+        <div class="tabla">
+            <div>
+                <div class="celda" id="titulo">Tabla de Autos</div>
+            </div>
+            <div id="fila1">
+                <div class="celda" id="foto">
+                    <a href="https://www.amd.com/es.html" target="_blank">
+                        <img src = "Images/AMD.jpg" alt="AMD" width="500">
+                    </a>
+                </div>
+                <div class="celda" id="texto">
+                    <a href="https://www.amd.com/es.html" target="_blank">
+                        <font size="6">AMD</font>
+                    </a>
+                </div>
+                <div class="celda" id="eliminar">
+                    <input onclick="eliminarFila('1');" type="submit" value="Eliminar" class="boton"/>
+                </div>
+            </div>
+            <div id="fila2">
+                <div class="celda" id="foto">
+                    <a href="https://www.apple.com/mx/" target="_blank">
+                        <img src = "Images/Apple.jpg" alt="Apple" width="500">
+                    </a>
+                </div>
+                <div class="celda" id="texto">
+                    <a href="https://www.apple.com/mx/" target="_blank">
+                        <font size="6">Apple</font>
+                    </a>
+                </div>
+                <div class="celda" id="eliminar">
+                    <input onclick="eliminarFila('2');" type="submit" value="Eliminar" class="boton"/>
+                </div>
+            </div>
+            <div id="fila3">
+                <div class="celda" id="foto">
+                    <a href="https://www.intel.la/content/www/xl/es/homepage.html" target="_blank">
+                        <img src = "Images/Intel.jpg" alt="Intel" width="500">
+                    </a>
+                </div>
+                <div class="celda" id="texto">
+                    <a href="https://www.intel.la/content/www/xl/es/homepage.htmlhttps://www.ferrari.com/" target="_blank">
+                        <font size="6">Intel</font>
+                    </a>
+                </div>
+                <div class="celda" id="eliminar">
+                    <input onclick="eliminarFila('3');" type="submit" value="Eliminar" class="boton"/>
+                </div>
+            </div>
+            <div id="fila4">
+                <div class="celda" id="foto">
+                    <a href="https://www.nvidia.com/es-la/" target="_blank">
+                        <img src = "Images/Nvidia.jpg" alt="Nvidia" width="500">
+                    </a>
+                </div>
+                <div class="celda" id="texto">
+                    <a href="https://www.nvidia.com/es-la/" target="_blank">
+                        <font size="6">Nvidia</font>
+                    </a>
+                </div>
+                <div class="celda" id="eliminar">
+                    <input onclick="eliminarFila('4');" type="submit" value="Eliminar" class="boton"/>
+                </div>
+            </div>
+            <div id="fila5">
+                <div class="celda" id="foto">
+                    <a href="https://www.qualcomm.com/snapdragon#overview" target="_blank">
+                        <img src = "Images/Qualcomm.jpg" alt="Qualcomm" width="500">
+                    </a>
+                </div>
+                <div class="celda" id="texto">
+                    <a href="https://www.qualcomm.com/snapdragon#overview" target="_blank">
+                        <font size="6">Qualcomm</font>
+                    </a>
+                </div>
+                <div class="celda" id="eliminar">
+                    <input onclick="eliminarFila('5');" type="submit" value="Eliminar" class="boton"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

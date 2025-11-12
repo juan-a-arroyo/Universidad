@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario</title>
+        <script>
+            var nombreUsuario, password, rol, numUsuario;
+            var usuarios = Array('Rubén', 'Juan', 'Pedro', 'Luis');
+            var pass = Array('1234', 'admin', 'abcd', 'password');
+            function validacion(usuario){
+                for(var i = 0; i < 4; i++)
+                    if(usuario == usuarios[i]){
+                        numUsuario = i;
+                    }
+            }
+            function recibe(){
+                nombreUsuario = document.Forma01.usuario.value;
+                password = document.Forma01.password.value;
+                rol = document.Forma01.rol.value;
+                if(nombreUsuario == "" || password == "" || rol == 0)
+                    alert("Faltan Campos por Llenar");
+                else{
+                    validacion(nombreUsuario);
+                    if(nombreUsuario == usuarios[numUsuario] && password == pass[numUsuario] && rol != 0){
+                        alert("Bienvenido " + nombreUsuario);
+                    }
+                    else
+                        alert("Datos Incorrectos");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form method="post" action="recibe.php" name="Forma01" id="">
+            <input type="text" name="usuario" id="usuario" placeholder="Usuario"/><br>
+            <input type="text" name="password" id="password" placeholder="Password"/><br>
+            <select name="rol" id="rol">
+                <option value="0">Selecciona</option>
+                <option value="1">Gerente</option>
+                <option value="2">Ejecutivo</option>
+            </select><br>
+            <input type="submit" onclick="recibe(); return false;" value="Enviar" />
+        </form>             
+    </body>
+</html>

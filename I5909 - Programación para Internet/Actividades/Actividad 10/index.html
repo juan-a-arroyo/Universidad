@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabla de Microchips</title>
+    </head>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        function eliminarFila(fila){
+            if(confirm("¿Desea borrar la fila "+fila+"?")){
+                $('#'+fila).hide();
+                $('#tabla').attr('height',$('#tabla').attr('height')-200);
+            }
+        }
+    </script>
+    <body>
+        <table id="tabla" border="1" height="1050" width="1200">
+            <tr>
+                <td height="50" colspan="3" align="center">
+                    <font size="6">Microchips</font>
+                </td>
+            </tr>
+            <tr id="1">
+                <td height="200">
+                    <a href="https://www.amd.com/es.html" target="_blank">
+                        <img src = "Images/AMD.jpg" alt="AMD" width="500">
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <a href="https://www.amd.com/es.html" target="_blank">
+                        <font size="6">AMD</font>
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <input onclick="eliminarFila('1');" type="submit" value="Eliminar"/>
+                </td>
+            </tr>
+            <tr id="2">
+                <td height="200">
+                    <a href="https://www.apple.com/mx/" target="_blank">
+                        <img src = "Images/Apple.jpg" alt="Apple" width="500">
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <a href="https://www.apple.com/mx/" target="_blank">
+                        <font size="6">Apple</font>
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <input onclick="eliminarFila('2');" type="submit" value="Eliminar"/>
+                </td>
+            </tr>
+            <tr id="3">
+                <td height="200">
+                    <a href="https://www.intel.la/content/www/xl/es/homepage.html" target="_blank">
+                        <img src = "Images/Intel.jpg" alt="Intel" width="500">
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <a href="https://www.intel.la/content/www/xl/es/homepage.htmlhttps://www.ferrari.com/" target="_blank">
+                        <font size="6">Intel</font>
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <input onclick="eliminarFila('3');" type="submit" value="Eliminar"/>
+                </td>
+            </tr>
+            <tr id="4">
+                <td height="200">
+                    <a href="https://www.nvidia.com/es-la/" target="_blank">
+                        <img src = "Images/Nvidia.jpg" alt="Nvidia" width="500">
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <a href="https://www.nvidia.com/es-la/" target="_blank">
+                        <font size="6">Nvidia</font>
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <input onclick="eliminarFila('4');" type="submit" value="Eliminar"/>
+                </td>
+            </tr>
+            <tr id="5">
+                <td height="200">
+                    <a href="https://www.qualcomm.com/snapdragon#overview" target="_blank">
+                        <img src = "Images/Qualcomm.jpg" alt="Qualcomm" width="500">
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <a href="https://www.qualcomm.com/snapdragon#overview" target="_blank">
+                        <font size="6">Qualcomm</font>
+                    </a>
+                </td>
+                <td align="center" width="50%">
+                    <input onclick="eliminarFila('5');" type="submit" value="Eliminar"/>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

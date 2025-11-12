@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Formulario</title>
+        <script>
+            var nombre, password, rol;
+            function recibe(){
+                var nombre = document.Forma01.usuario.value;
+                var password = document.Forma01.password.value;
+                var rol = document.Forma01.rol.value;
+                if(nombre!="" && password!="" && rol!=0)
+                    alert("Campos Llenos");
+                else
+                    alert("Faltan Campos por LLenar");
+            }
+        </script>
+    </head>
+    <body>
+        <form method="post" action="recibe.php" name="Forma01" id="">
+            <input type="text" name="usuario" id="usuario" placeholder="Usuario"/><br>
+            <input type="password" name="password" id="password" placeholder="Password"/><br>
+            <select name="rol" id="rol">
+                <option value="0">Selecciona</option>
+                <option value="1">Gerente</option>
+                <option value="2">Ejecutivo</option>
+            </select><br>
+            <input type="submit" onclick="recibe(); return false;" value="Enviar" />
+        </form>             
+    </body>
+</html>

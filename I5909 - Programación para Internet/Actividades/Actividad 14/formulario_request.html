@@ -1,0 +1,57 @@
+<html>
+ 	<head>
+		<meta charset="UTF-8">
+  		<title>Formulario request</title>
+ 	</head>
+	<script>
+		function recibe(){
+			if(document.forma01.nombre.value == "" || document.forma01.correo.value == "@udg.mx" || document.forma01.correo.value == "" ||
+			document.forma01.correo.value == "" || document.forma01.sexo.value == "" || document.forma01.comentario.value == "" ||
+			document.forma01.carrera.value == 0 || document.forma01.password.value == "" || document.forma01.promedio.value == "" ||
+			document.forma01.fecha.value == "")
+				alert("Faltan Campos por Llenar");
+			else{
+				document.forma01.method = 'post';
+				document.forma01.action = 'recibe.php';
+				document.forma01.submit();
+			}
+		}
+	</script>
+ 	<body>
+		<form name="forma01">
+			<label>Nombre:</label>
+			<input id="nombre" type="text" name="nombre" placeholder="Escribe tu nombre" required>
+			<br>
+			<label>Correo:</label>
+			<input type="email" name="correo" value="@udg.mx">
+			<br>
+			<label for="sexo">Genero:</label>
+			<input type="radio" name="sexo" value="F">Femenino
+			<input type="radio" name="sexo" value="M">Masculino
+			<br>
+			<input id="boletin" type="checkbox" name="boletin" value="1" checked>
+			<label for="boletin">Recibir Boletín</label>
+			<br>
+			<label for="comentario">Comentario:</label><br>
+			<textarea name="comentario" cols="30" rows="5"></textarea>
+			<br>
+			<label for="carrera">Carrera:</label>
+			<select id="carrera" name="carrera">
+				<option value="0" selected>Selecciona</option>
+				<option value="1">Ing. Informática</option>
+				<option value="2">Ing. Computación</option>			
+			</select>
+			<br>
+			<label for="password">Contraseña:</label>
+			<input type="password" name="password">
+			<br>
+			<label for="promedio">Promedio:</label>
+			<input type="number" name="promedio" min="60" max="100">
+			<br>
+			<label for="fecha">Fecha de Nacimiento:</label>
+			<input type="date" name="fecha">
+			<br>
+			<input onclick="recibe(); return false;" type="submit" value="Enviar con input"/>
+		</form>
+ 	</body>
+</html>

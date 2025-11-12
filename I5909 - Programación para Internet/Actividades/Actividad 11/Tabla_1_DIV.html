@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabla 1</title>
+    </head>
+    <style>
+        #tabla{
+            display: table;
+            border: 1px solid black;
+            width: 960;
+            height: 800;
+        }
+
+        .celda{
+            display: table-cell;
+            border: 1px solid black;
+        }
+
+        #celda1{
+            height: 50px;
+            width: 960px;
+            vertical-align: middle;
+        }
+
+        #celda2{
+            height: 750px;
+            width: 100px;
+        }
+
+        #celda3{
+            height: 750px;
+            width: 860px;
+        }
+    </style>
+    <body>
+        <a>Tabla: 960px ancho 800px alto</a>
+        <div id="tabla">
+            <div>
+                <div class="celda" id="celda1">Fila: 50px alto</div>
+            </div>
+            <div>
+                <div class="celda" id="celda2">Columna: 100px ancho</div>
+                <div class="celda" id="celda3"></div>
+            </div>
+        </div>
+    </body>
+</html>

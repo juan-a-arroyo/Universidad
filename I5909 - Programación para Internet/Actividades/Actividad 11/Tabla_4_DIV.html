@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabla 4</title>
+    </head>
+    <style>
+        #tabla{
+            display: table;
+            border: 1px solid black;
+            width: 960px;
+            height: 800px;
+        }
+        .celda{
+            display: table-cell;
+            border: 1px solid black;
+        }
+        .contenedor{
+            display: table-cell;
+        }
+        #celda1, #celda2, #celda3, #celda4{
+            height: 400px;
+            width: 480px;
+            vertical-align: middle;
+        }
+
+        #celda1_1, #celda2_1, #celda3_1, #celda4_1{
+            height: 200px;
+            width: 200px;
+        }
+
+        #celda1_2, #celda2_2, #celda2_5, #celda3_2, #celda3_6{
+            width: 200px;
+            height: 20px;
+        }
+        #celda1_3{
+            width: 20px;
+            height: 180px;
+        }
+        #celda1_4{
+            width: 180px;
+            height: 180px;
+        }
+        #celda2_3, #celda2_4{
+            width: 100px;
+            height: 160px;
+        }
+        #celda3_3{
+            width: 20px;
+            height: 160px;
+        }
+        #celda3_4, #celda3_5{
+            width: 180px;
+            height: 80px;
+        }
+        #celda4_2, #celda4_3, #celda4_4,#celda4_5{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <body>
+        <a>Tabla: 960px ancho 800px alto</a>
+        <div id="tabla">
+            <div>
+                <div class="celda" id="celda1" align="center">
+                    <div class="celda" id="celda1_1">
+                        <div class="celda" id="celda1_2"></div>
+                        <div>
+                            <div class="celda" id="celda1_3"></div>
+                            <div class="celda" id="celda1_4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="celda" id="celda2" align="center">
+                    <div class="celda" id="celda2_1">
+                        <div class="celda" id="celda2_2"></div>
+                        <div>
+                            <div class="celda" id="celda2_3"></div>
+                            <div class="celda" id="celda2_4"></div>
+                        </div>
+                        <div class="celda" id="celda2_5"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="celda" id="celda3" align="center">
+                    <div class="celda" id="celda3_1">
+                        <div class="celda" id="celda3_2"></div>
+                        <div>
+                            <div class="celda" id="celda3_3"></div>
+                            <div class="contenedor">
+                                <div>
+                                    <div class="celda" id="celda3_4"></div>
+                                </div>
+                                <div>
+                                    <div class="celda" id="celda3_5"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="celda" id="celda3_6"></div>
+                    </div>
+                </div>
+                <div class="celda" id="celda4" align="center">
+                    <div class="celda" id="celda4_1">
+                        <div>
+                            <div class="celda" id="celda4_2"></div>
+                            <div class="celda" id="celda4_3"></div>
+                        </div>
+                        <div>
+                            <div class="celda" id="celda4_4"></div>
+                            <div class="celda" id="celda4_5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

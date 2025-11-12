@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ajax /JQuery</title>
+    </head>
+    <link href="Administrador/css/style.css" type="text/css" rel="stylesheet">
+    <script src="Administrador/js/jquery-3.3.1.min.js"></script>
+    <script>
+        function ejecutaAjax(){
+            var numero = $('#numero').val();
+            if(numero){
+                $.ajax({
+                    url : 'Administrador/Funciones/respuesta.php',
+                    type :'post',
+                    dataType : 'text',
+                    data : 'num='+numero,
+                    success : function(res){
+                        alert(res);
+                        if(res == 1)
+                            $('#mensaje').html('El numero enviado fue MAYOR a 10');
+                        else
+                            $('#mensaje').html('El numero enviado fue MENOR a 10');
+                        setTimeout("$('#mensaje').html('');", 8000);
+                    },error: function(){
+                        alert('Error archivo no encontrado...');
+                    }
+                });
+            } else{
+                $('#mensaje').html('Escribe un numero');
+                setTimeout("$('#mensaje').html('');", 5000);
+            }
+        }
+        function dentroFoco(){
+                $('#mensaje').html('Acabas de dar click DENTRO del campo');
+                setTimeout("$('#mensaje').html('');", 8000);
+            }
+        function fueraFoco(){
+            $('#mensaje').html('Acabas de dar click FUERA del campo');
+            setTimeout("$('#mensaje').html('');", 8000);
+        }
+    </script>
+    <body>
+        <input type="text" name="numero" id="numero" placeholder="Escribe un número" onfocus="dentroFoco();" onblur="fueraFoco();"/><br><br>
+        <a href="javascript:void();" onclick="ejecutaAjax();">Click para ejecutar Ajax</a><br>
+        <div id="mensaje"></div>
+    </body>
+</html>

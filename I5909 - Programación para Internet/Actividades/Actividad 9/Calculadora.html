@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Calculadora</title>
+    </head>
+    <script>
+        var point = false, symbol = false, sel = false;
+        function addDisplay(val){
+            if(point == true && val == '.')
+                val = '';
+            document.calculadora.display.value += val;
+            if(val == '.')
+                point = true;
+            symbol = false;
+        }
+        function igual(){
+            document.calculadora.display.value=eval(document.calculadora.display.value);
+            point = false;
+        }
+
+        function seleccion(){
+            var seleccionado = document.getElementById("operacion");
+            if(sel && !symbol){
+                document.calculadora.display.value += seleccionado.options[seleccionado.selectedIndex].value;
+                symbol = true;
+            }
+            sel = !sel;
+        }
+    </script>
+    <style>
+        #calculadora .textfield{
+            width: 500px;
+            margin: 3px;
+            cursor: default;
+            font-size: 40;
+        }
+
+        #calculadora input[type="button"], input[type="reset"]{
+            margin: 3px;
+            cursor: pointer;
+            font-size: 40;
+        }
+
+        #calculadora select{
+            cursor: pointer;
+            margin: 3px;
+            width: 450px;
+            font-size: 40;
+        }
+
+        #calculadora .left{
+            text-align: center;
+        }
+
+        #calculadora .center{
+            text-align: center;
+            position: relative;
+            left: 180;
+        }
+
+        #calculadora .right{
+            text-align: center;
+            position: relative;
+            left: 365;
+        }
+
+        #operacion {
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div id="calculadora">
+            <form name="calculadora">
+                <input type="textfield" name="display" value="" autocomplete="off" readonly class="textfield"><br>
+                <input type="button" value="9" onclick="addDisplay(9)" class="left">
+                <input type="button" value="8" onclick="addDisplay(8)" class="center">
+                <input type="button" value="7" onclick="addDisplay(7)" class="right"><br>
+                <input type="button" value="6" onclick="addDisplay(6)" class="left">
+                <input type="button" value="5" onclick="addDisplay(5)" class="center">
+                <input type="button" value="4" onclick="addDisplay(4)" class="right"><br>
+                <input type="button" value="3" onclick="addDisplay(3)" class="left">
+                <input type="button" value="2" onclick="addDisplay(2)" class="center">
+                <input type="button" value="1" onclick="addDisplay(1)" class="right"><br>
+                <input type="button" value=". " onclick="addDisplay('.')" class="left">
+                <input type="button" value="0" onclick="addDisplay(0)" class="center">
+                <input type="button" value="=" onclick="igual()" class="right"><br>
+                <select id="operacion" onclick="seleccion()">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input type="reset" value="c">
+            </form>
+        </div>
+    </body>
+</html>

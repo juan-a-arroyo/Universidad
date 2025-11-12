@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    background: #191D1F;
+}
+table{
+    border-radius: 10px;
+    border-spacing: 0px;
+    color: white;
+    font-size: x-large;
+    width: 100%;
+    max-width: 100%; 
+}
+td{
+    border-spacing: 0px;
+    padding: 15px;
+    padding-right: 50px;
+    font-family: Roboto;
+}
+tr:nth-child(odd){
+    background-color: #2B3336;
+}
+tr:nth-child(even){
+    background-color: #3C4349;
+}
+.title{
+    font-weight: 600;
+    padding-left: 50px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.header{
+    font-weight: 400;
+}
+.delete, .new{
+    padding-right: 25px;
+    padding-left: 0px;
+    text-align: center;
+}
+.bottom{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.mensaje{
+    color: #F00;
+    font-size: 16px;
+}
+::-webkit-scrollbar{
+    background-color: #191D1F;
+}
+::-webkit-scrollbar-track{
+    background-color: #2B3336;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #3C4349;
+    border-radius: 20px;
+}

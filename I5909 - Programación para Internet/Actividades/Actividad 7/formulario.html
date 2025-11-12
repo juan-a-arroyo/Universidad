@@ -1,0 +1,69 @@
+<html>
+
+ <head>
+  <title>Formulario request</title>
+  
+ </head>
+ <script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    function enviaDatos(){
+        var nombre = $('#campo1').val();
+        var sexo = document.forma01.sexo.value;
+        var correo = $('#campo2').val(); 
+        var pass = document.forma01.pasw.value;
+        var comentario = $('#campo3').val(); 
+        var boletin = document.getElementById('check').checked; 
+        var seleccion = document.getElementById('select');
+	    var carrera = seleccion.options[seleccion.selectedIndex].text;
+        var promedio = $('#campo5').val(); 
+        var fecha = $('#campo6').val(); 
+        if(nombre == "" || correo == "" || sexo == "" || comentario == "" || carrera == "Selecciona" || pass == "" || promedio == "" || fecha == "")
+			alert("Faltan Campos por llenar");
+		else
+            alert(nombre+'\n'+correo+'\n'+sexo+'\n'+boletin+'\n'+comentario+'\n'+carrera+'\n'+pass+'\n'+promedio+'\n'+fecha);
+    }
+</script>
+ <body>
+	<form name="forma01" action="recibe.html" method="POST">
+		<label>
+			Nombre:
+        </label>
+		<input id="campo1" type="text" name="nombre" placeholder="Escribe tu nombre" required>
+		
+		<br>
+		<label>Correo:</label>
+		<input id="campo2" type="email" name="correo" value="@udg.mx">
+		<br>
+		<label for="sexo">Genero:</label>
+		<input type="radio" name="sexo" value="F">Femenino
+		<input type="radio" name="sexo" value="M">Masculino
+		<br>
+		<input id="check" type="checkbox" name="boletin" value="1" checked>
+		<label for="boletin">Recibir Boletín</label>
+		<br>
+		<label for="comentario">Comentario:</label><br>
+		<textarea id="campo3" name="comentario" cols="30" rows="5"></textarea>
+		<br>
+		<label for="carrera">Carrera:</label>
+		<select id="select" name="carrera">
+			<option value="0" selected>Selecciona</option>
+			<option value="1">Ing. Informática</option>
+			<option value="2">Ing. Computación</option>			
+		</select>
+		<br>
+		<label id="campo4" for="pasw">Contraseña:</label>
+		<input type="password" name="pasw">
+		<br>
+		<label for="promedio">Promedio:</label>
+		<input id="campo5" type="number" name="promedio" min="60" max="100">
+		<br>
+		<label for="fecha">Fecha nacimiento:</label>
+		<input id="campo6" type="date" name="fecha">
+		
+		<br>
+		<input onClick="enviaDatos(); return false;" type="submit" value="Enviar con input">
+	</form>
+	
+ </body>
+
+</html>

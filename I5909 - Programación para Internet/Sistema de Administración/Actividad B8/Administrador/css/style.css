@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    background: #071430;
+}
+table{
+    border-radius: 10px;
+    border-spacing: 0px;
+    color: white;
+    font-size: x-large;
+    width: 100%;
+    max-width: 100%; 
+}
+td{
+    border-spacing: 0px;
+    padding: 15px;
+    padding-right: 50px;
+    font-family: Roboto;
+}
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+select{
+    width: 98%;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: x-large;
+    padding-left: 25px;
+}
+option{
+    color: white;
+}
+option:nth-child(odd){
+    background-color: #031b4e;
+}
+option:nth-child(even){
+    background-color: #142968;
+}
+tr:nth-child(odd){
+    background-color: #031b4e;
+}
+tr:nth-child(even){
+    background-color: #142968;
+}
+tr:nth-child(odd) .button {
+    background-color: #142968;
+}
+tr:nth-child(even) .button {
+    background-color: #031b4e;
+}
+tr:nth-child(odd) .button:active {
+    background-color: #031b4e;
+}
+tr:nth-child(even) .button:active {
+    background-color: #142968;
+}
+div{
+    display: flex; 
+    justify-content: center;
+}
+.title{
+    font-weight: 600;
+    padding-left: 50px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: xx-large;
+}
+.subtitle{
+    font-weight: 300;
+    padding-left: 50px;
+}
+.header{
+    font-weight: 400;
+}
+.first{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.button{
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: x-large;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.bottom{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 25px;
+}
+.message{
+    color: red;
+    font-size: 24px;
+    display: block;
+}
+.delete, .edit, .details, #new{
+    padding-right: 25px;
+    padding-left: 0px;
+    text-align: center;
+}
+.preview{
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 20px;
+}
+.tab{
+    text-align: center;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+#preview-image{
+    cursor: pointer;
+}
+#photo{
+    width: 500px;
+}
+#archivo{
+    display: none;
+}
+#mensaje-error{
+    padding-top: 8px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #142968 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+::-webkit-scrollbar{
+    background-color: #071430;
+}
+::-webkit-scrollbar-track{
+    background-color: #031b4e;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #142968;
+    border-radius: 20px;
+}
